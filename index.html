@@ -3,22 +3,269 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="BatchSave Pro — fast bulk downloads, Gmail attachments and PDF tools in one browser extension.">
-  <title>BatchSave Pro</title>
-  <link rel="icon" href="assets/batchsave-logo.png">
+  <meta name="description" content="BatchSave Pro is a Chrome extension for bulk file downloads, Gmail attachments and local PDF tools.">
+  <meta name="theme-color" content="#071b45">
+  <title>BatchSave Pro — Bulk downloads, Gmail attachments & PDF tools</title>
+  <link rel="icon" type="image/png" href="assets/app-icon.png">
+  <link rel="apple-touch-icon" href="assets/app-icon.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="shell">
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/" aria-label="BatchSave Pro home">
+        <img src="assets/batchsave-logo.png" alt="">
+        <span><strong>BatchSave</strong> <em>Pro</em></span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#features">Features</a>
+        <a href="#gmail">Gmail</a>
+        <a href="#pdf">PDF Tools</a>
+        <a href="#privacy">Privacy</a>
+        <a href="privacy.html">Policy</a>
+      </nav>
+      <a class="nav-cta is-disabled" href="#availability" aria-disabled="true">Chrome Web Store · Soon</a>
+    </div>
+  </header>
+
+  <main>
     <section class="hero">
-      <img class="logo" src="assets/batchsave-logo.png" alt="BatchSave Pro">
-      <div>
-        <p class="eyebrow">Browser productivity extension</p>
-        <h1>BatchSave Pro</h1>
-        <p class="lead">Bulk file downloads, Gmail attachments and practical PDF tools in one clean workflow.</p>
-        <p class="status">Official website coming soon.</p>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> Chrome productivity extension</div>
+          <h1>Download more.<br><span>Click less.</span></h1>
+          <p class="hero-lead">BatchSave Pro finds real files and photos on web pages, helps you collect Gmail attachments, and gives you practical PDF tools — all from one streamlined Chrome workspace.</p>
+          <div class="hero-actions">
+            <a class="button primary is-disabled" href="#availability" aria-disabled="true">
+              <span>Get BatchSave Pro</span>
+              <small>Chrome Web Store · coming soon</small>
+            </a>
+            <a class="button secondary" href="#features">Explore features</a>
+          </div>
+          <div class="trust-row">
+            <span><i>✓</i> Local PDF processing</span>
+            <span><i>✓</i> Read-only Gmail access</span>
+            <span><i>✓</i> No file overwrite</span>
+          </div>
+        </div>
+
+        <div class="product-visual" aria-label="BatchSave Pro product preview">
+          <div class="browser-bar">
+            <span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span>
+            <div class="browser-address">batchsavepro.com</div>
+          </div>
+          <div class="extension-card">
+            <div class="extension-head">
+              <div class="extension-brand">
+                <img src="assets/batchsave-logo.png" alt="">
+                <div><strong>BatchSave Pro</strong><small>Files and Gmail attachments</small></div>
+              </div>
+              <span class="version-pill">PRO</span>
+            </div>
+            <div class="account-strip">
+              <span class="status-dot"></span>
+              <div><strong>Signed in</strong><small>Current plan · BatchSave Pro</small></div>
+            </div>
+            <div class="mini-tabs"><span class="active">Downloads</span><span>PDF Tools</span></div>
+            <div class="mini-actions"><span class="primary-action">Scan this page</span><span>Download selected</span></div>
+            <div class="mini-filter"><span>Search filenames</span><strong>Relevant files ▾</strong></div>
+            <div class="file-row"><span class="check on">✓</span><span class="file-icon">PDF</span><div><strong>invoice-2026.pdf</strong><small>example.com · PDF</small></div><b>PDF</b></div>
+            <div class="file-row"><span class="check on">✓</span><span class="file-icon photo">IMG</span><div><strong>product-photo.jpg</strong><small>example.com · IMAGE</small></div><b>JPG</b></div>
+            <div class="file-row"><span class="check"></span><span class="file-icon doc">DOC</span><div><strong>specification.docx</strong><small>example.com · FILE</small></div><b>DOCX</b></div>
+            <div class="mini-footer"><span>3 files found · 2 selected</span><strong>Download ZIP</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="metrics">
+      <div class="container metrics-grid">
+        <div><strong>1 click</strong><span>to scan a page</span></div>
+        <div><strong>150 files</strong><span>per local ZIP batch</span></div>
+        <div><strong>100 MB</strong><span>ZIP safety limit</span></div>
+        <div><strong>3 PDF tools</strong><span>built into the extension</span></div>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">Downloads</span>
+          <h2>Turn a page full of links into a clean download queue.</h2>
+          <p>BatchSave prioritizes useful files and substantial photos instead of cluttering the list with tiny icons, tracking pixels and decorative assets.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card feature-large">
+            <div class="feature-icon">⌁</div>
+            <span class="card-kicker">Smart scanning</span>
+            <h3>Find real page files automatically</h3>
+            <p>Scan the current page for linked documents, downloadable resources and meaningful images. HTML download links are recognized even when the URL has no obvious file extension.</p>
+            <div class="chip-row"><span>PDF</span><span>Photos</span><span>Attachments</span><span>Other files</span></div>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">⌕</div>
+            <h3>Search & filter</h3>
+            <p>Filter results by relevant files, attachments, photos, PDFs, other resources or everything found on the page.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">✓</div>
+            <h3>Fast selection</h3>
+            <p>Select all, clear selection, remove results or choose only the files you actually need.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">⇩</div>
+            <h3>Grouped downloads</h3>
+            <p>Files selected in one batch are placed into the same timestamped BatchSave Pro folder inside your Downloads directory.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">ZIP</div>
+            <h3>Local ZIP export</h3>
+            <p>Create a ZIP directly in Chrome for supported resources. BatchSave keeps the process local and prevents accidental overwrites.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="gmail" class="section section-dark">
+      <div class="container split">
+        <div>
+          <span class="section-kicker light">Gmail attachments</span>
+          <h2>Your email attachments, without the repetitive clicking.</h2>
+          <p class="section-copy light-copy">BatchSave Pro supports two Gmail workflows: quick scanning of visible attachment cards in an open Gmail message and a full attachment manager using the official Gmail API after Google authorization.</p>
+          <div class="dark-feature-list">
+            <div><span>01</span><div><strong>Scan an open Gmail message</strong><p>Detect visible attachment cards and trigger Gmail’s own download controls for selected files.</p></div></div>
+            <div><span>02</span><div><strong>Search real mailbox attachments</strong><p>Use Gmail search syntax such as <code>has:attachment</code> or date/sender filters to find attachment parts.</p></div></div>
+            <div><span>03</span><div><strong>Download files or ZIP</strong><p>Select attachments and export individual files or a local ZIP from the Gmail attachment manager.</p></div></div>
+          </div>
+          <div class="privacy-note"><strong>Read-only access.</strong> Gmail data is accessed only when you use Gmail features and with permissions you explicitly grant.</div>
+        </div>
+
+        <div class="mail-visual">
+          <div class="mail-head"><span class="mail-logo">M</span><div><strong>Gmail Attachments</strong><small>BatchSave Pro · read-only access</small></div></div>
+          <div class="mail-search"><span>has:attachment newer_than:30d</span><b>Find attachments</b></div>
+          <div class="mail-file"><span class="mail-check">✓</span><div><strong>invoice.pdf</strong><small>Billing · 245 KB</small></div><em>PDF</em></div>
+          <div class="mail-file"><span class="mail-check">✓</span><div><strong>photos.zip</strong><small>Project files · 8.4 MB</small></div><em>ZIP</em></div>
+          <div class="mail-file"><span class="mail-check">✓</span><div><strong>report.xlsx</strong><small>Monthly report · 612 KB</small></div><em>XLSX</em></div>
+          <div class="mail-bottom"><span>3 selected</span><div><b>Download files</b><b class="outline">Download ZIP</b></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pdf" class="section">
+      <div class="container">
+        <div class="section-heading centered">
+          <span class="section-kicker">PDF Tools</span>
+          <h2>Three everyday PDF jobs. No extra website required.</h2>
+          <p>PDF inputs are processed locally in Chrome. Your selected documents are not uploaded to BatchSave Pro just to perform these operations.</p>
+        </div>
+        <div class="pdf-grid">
+          <article class="pdf-card">
+            <div class="pdf-number">01</div>
+            <div class="pdf-icon">IMG → PDF</div>
+            <h3>Images → PDF</h3>
+            <p>Turn JPG, PNG, WebP, GIF or BMP images into a PDF. Reorder pages and choose output DPI and image quality before creating the file.</p>
+            <ul><li>Multiple images</li><li>Page ordering</li><li>96–300 DPI options</li><li>Quality control</li></ul>
+          </article>
+          <article class="pdf-card featured">
+            <div class="pdf-number">02</div>
+            <div class="pdf-icon">PDF + PDF</div>
+            <h3>Merge PDF</h3>
+            <p>Combine complete PDF documents in the exact order you choose while preserving existing pages, vector text and document structure.</p>
+            <ul><li>Multiple PDFs</li><li>Reorder documents</li><li>Local processing</li><li>One merged download</li></ul>
+          </article>
+          <article class="pdf-card">
+            <div class="pdf-number">03</div>
+            <div class="pdf-icon">PDF ↓</div>
+            <h3>Compress PDF</h3>
+            <p>Apply lossless structural optimization while preserving pages, text and vectors. The original file stays unchanged.</p>
+            <ul><li>Safe optimization</li><li>No upload</li><li>Original preserved</li><li>One-click download</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="privacy" class="section privacy-section">
+      <div class="container privacy-grid">
+        <div>
+          <span class="section-kicker">Privacy by design</span>
+          <h2>Your files should not need a round trip through somebody else’s server.</h2>
+          <p>BatchSave keeps page scanning, local ZIP creation and PDF Tool inputs in Chrome whenever the feature does not require a connected service.</p>
+          <a class="text-link" href="privacy.html">Read the Privacy Policy →</a>
+        </div>
+        <div class="privacy-cards">
+          <article><span>⌂</span><div><strong>Local file processing</strong><p>PDF Tool files and supported download packaging stay on your device.</p></div></article>
+          <article><span>G</span><div><strong>Explicit Gmail permission</strong><p>Gmail API access is read-only and used only for attachment workflows you initiate.</p></div></article>
+          <article><span>◉</span><div><strong>Secure account access</strong><p>Authentication and entitlement checks use Supabase; billing checkout and management use Stripe.</p></div></article>
+          <article><span>↺</span><div><strong>No silent overwrites</strong><p>Chrome keeps existing files safe by uniquifying matching filenames when necessary.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section account-section">
+      <div class="container split account-split">
+        <div class="account-visual">
+          <div class="account-window">
+            <span class="window-kicker">BATCHSAVE ACCOUNT</span>
+            <div class="account-person"><img src="assets/app-icon.png" alt=""><div><strong>Your account</strong><small>Signed in</small></div></div>
+            <div class="account-line"><span>Current plan</span><strong>BatchSave Pro · Active</strong></div>
+            <div class="account-line"><span>Password</span><strong>Securely managed</strong></div>
+            <div class="account-buttons"><span>Manage subscription</span><span>Change password</span></div>
+          </div>
+        </div>
+        <div>
+          <span class="section-kicker">Account & subscription</span>
+          <h2>One account across the BatchSave Pro workflow.</h2>
+          <p class="section-copy">Create an account, verify your email, sign in from the extension and see your current access status directly in the popup.</p>
+          <div class="bullet-grid">
+            <span>✓ Email confirmation</span>
+            <span>✓ Password recovery</span>
+            <span>✓ Account settings</span>
+            <span>✓ Subscription management</span>
+          </div>
+          <div class="price-card">
+            <div><small>BatchSave Pro</small><strong>€9.90 <em>/ month</em></strong></div>
+            <p>3-day free trial when starting a subscription. Cancel through subscription management.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="availability" class="section cta-section">
+      <div class="container cta-card">
+        <img src="assets/batchsave-logo.png" alt="">
+        <div>
+          <span class="section-kicker light">Launching soon</span>
+          <h2>BatchSave Pro is being prepared for the Chrome Web Store.</h2>
+          <p>Once the public listing is approved, the install button on this page will link directly to the official Chrome Web Store listing.</p>
+        </div>
+        <span class="store-button disabled">Chrome Web Store<br><small>Link coming after approval</small></span>
+      </div>
+    </section>
+
+    <section class="section faq-section">
+      <div class="container">
+        <div class="section-heading centered">
+          <span class="section-kicker">FAQ</span>
+          <h2>Good to know.</h2>
+        </div>
+        <div class="faq-grid">
+          <details><summary>Does BatchSave upload my PDFs?</summary><p>No. PDF Tools are designed to process selected files locally in Chrome.</p></details>
+          <details><summary>Can it download every file from every website?</summary><p>No browser extension can guarantee that. Some sites block cross-origin fetching, require authentication, generate files dynamically or use unsupported redirects. BatchSave provides direct download fallback where appropriate.</p></details>
+          <details><summary>How does Gmail access work?</summary><p>Visible attachment scanning can use Gmail’s own page controls. Full mailbox attachment search uses the official Gmail API with explicit read-only Google authorization.</p></details>
+          <details><summary>What happens when filenames are duplicated?</summary><p>BatchSave does not intentionally overwrite existing files. Chrome can automatically uniquify matching filenames.</p></details>
+          <details><summary>Is BatchSave Pro already on the Chrome Web Store?</summary><p>Not yet. The extension is currently being prepared for submission. This website will link to the official listing after approval.</p></details>
+          <details><summary>Can I manage my subscription?</summary><p>Yes. Signed-in users with an active or trialing subscription can open subscription management from the extension.</p></details>
+        </div>
       </div>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand"><img src="assets/batchsave-logo.png" alt=""><div><strong>BatchSave Pro</strong><span>Bulk downloads. Gmail attachments. PDF tools.</span></div></div>
+      <div class="footer-links"><a href="#features">Features</a><a href="privacy.html">Privacy Policy</a><a href="#availability">Chrome Web Store</a></div>
+      <div class="footer-copy">© 2026 BatchSave Pro</div>
+    </div>
+  </footer>
 </body>
 </html>

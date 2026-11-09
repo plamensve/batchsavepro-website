@@ -3,18 +3,90 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="robots" content="index,follow">
+  <meta name="description" content="BatchSave Pro privacy policy.">
+  <meta name="theme-color" content="#071b45">
   <title>Privacy Policy — BatchSave Pro</title>
-  <link rel="icon" href="assets/batchsave-logo.png">
+  <link rel="icon" type="image/png" href="assets/app-icon.png">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .policy-hero{background:linear-gradient(145deg,#06162f,#0b3c82);padding:72px 0;color:#fff}
+    .policy-hero h1{font-size:50px;letter-spacing:-.045em;margin:14px 0 12px}
+    .policy-hero p{color:#bfd1e8;max-width:720px;line-height:1.7}
+    .policy{max-width:820px;margin:0 auto;padding:60px 0 90px}
+    .policy h2{font-size:25px;margin:38px 0 12px;letter-spacing:-.02em}
+    .policy h3{font-size:17px;margin:24px 0 8px}
+    .policy p,.policy li{font-size:14px;line-height:1.75;color:#52657f}
+    .policy ul{padding-left:22px}
+    .policy .notice{background:#f4f8ff;border:1px solid #dbeafe;border-radius:14px;padding:16px 18px}
+  </style>
 </head>
 <body>
-  <main class="shell">
-    <article class="hero" style="display:block;max-width:760px">
-      <img class="logo" src="assets/batchsave-logo.png" alt="BatchSave Pro" style="width:72px;height:72px">
-      <h1 style="font-size:34px;margin-top:18px">Privacy Policy</h1>
-      <p class="lead">The full BatchSave Pro privacy policy will be published here before the public Chrome Web Store release.</p>
-    </article>
-  </main>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="/"><img src="assets/batchsave-logo.png" alt=""><span><strong>BatchSave</strong> <em>Pro</em></span></a>
+    <nav class="nav-links"><a href="/">Home</a><a href="/#features">Features</a><a href="/#privacy">Privacy</a></nav>
+  </div>
+</header>
+<main>
+<section class="policy-hero">
+  <div class="container">
+    <span class="section-kicker light">Privacy Policy</span>
+    <h1>Built to minimize unnecessary data movement.</h1>
+    <p>This policy explains how BatchSave Pro handles account information, page resources, Gmail access, local PDF processing and subscription-related data.</p>
+  </div>
+</section>
+<div class="container">
+  <article class="policy">
+    <p class="notice"><strong>Last updated: November 9, 2026.</strong> BatchSave Pro is being prepared for public distribution through the Chrome Web Store. This policy reflects the current extension architecture.</p>
+
+    <h2>1. What BatchSave Pro does</h2>
+    <p>BatchSave Pro is a Chrome extension for discovering and downloading files and images from web pages, handling selected Gmail attachments, and performing local PDF operations such as image-to-PDF conversion, PDF merging and structural PDF optimization.</p>
+
+    <h2>2. Page scanning and downloads</h2>
+    <p>When you choose to scan a page, BatchSave analyzes resources available to the extension on that page so it can identify downloadable files and images. Scan results are displayed inside the extension. Supported download packaging and ZIP generation are performed locally in Chrome.</p>
+    <p>BatchSave does not intentionally overwrite existing files. Chrome may automatically create a unique filename when a matching file already exists.</p>
+
+    <h2>3. PDF Tools</h2>
+    <p>Files selected for Images → PDF, Merge PDF and Compress PDF are processed locally in the browser. These PDF Tool inputs are not uploaded to BatchSave Pro servers merely to perform the document operation.</p>
+
+    <h2>4. Gmail access</h2>
+    <p>BatchSave provides Gmail attachment functionality only when you initiate it. The extension may use visible Gmail attachment controls for an open message and, when configured and authorized, the official Gmail API for mailbox attachment search and retrieval.</p>
+    <ul>
+      <li>Google authorization is explicit.</li>
+      <li>The requested Gmail API access is read-only.</li>
+      <li>Gmail attachment data is used to perform the attachment workflow you request.</li>
+      <li>BatchSave does not use Gmail message data for advertising.</li>
+    </ul>
+
+    <h2>5. Account information</h2>
+    <p>BatchSave uses Supabase for user authentication, email verification, password recovery, account identity and entitlement checks. Account information may include your email address, name, authentication identifiers and access/subscription state.</p>
+
+    <h2>6. Subscription and billing</h2>
+    <p>Subscription checkout and billing management use Stripe. Payment card details are handled by Stripe’s checkout and billing systems rather than being stored directly by the browser extension.</p>
+
+    <h2>7. Authentication emails</h2>
+    <p>Account confirmation and password recovery emails are sent using the configured Supabase authentication email flow and the BatchSave Pro email delivery provider.</p>
+
+    <h2>8. Local extension storage</h2>
+    <p>The extension may use Chrome extension storage to maintain session information, short-lived workflow state, preferences and operational state required for features such as authentication and downloads.</p>
+
+    <h2>9. Permissions</h2>
+    <p>BatchSave requests browser permissions needed for its core functions, including active-tab access, downloads, extension storage, scripting on pages you choose to scan, identity for Google authorization, and access to the BatchSave account backend. Optional website access is requested when necessary to retrieve selected page resources.</p>
+
+    <h2>10. Third-party services</h2>
+    <p>BatchSave currently relies on service providers for specific functions, including Supabase for account infrastructure, Stripe for subscription billing, Google for Gmail authorization/API access, and Resend for transactional email delivery.</p>
+
+    <h2>11. Security and limitations</h2>
+    <p>No software can guarantee that every website resource can be downloaded. Some sites require authentication, block cross-origin requests, use expiring links or dynamically generate files. BatchSave does not bypass website access controls or disabled Gmail downloads.</p>
+
+    <h2>12. Changes to this policy</h2>
+    <p>This policy may be updated as BatchSave Pro evolves, particularly before or after Chrome Web Store publication or when connected services change. The current version will be published on this page.</p>
+
+    <h2>13. Contact</h2>
+    <p>Support and contact information will be added to the official BatchSave Pro website before the public Chrome Web Store release.</p>
+  </article>
+</div>
+</main>
+<footer class="site-footer"><div class="container footer-grid"><div class="footer-brand"><img src="assets/batchsave-logo.png" alt=""><div><strong>BatchSave Pro</strong><span>Privacy Policy</span></div></div><div class="footer-links"><a href="/">Home</a><a href="/#features">Features</a></div><div class="footer-copy">© 2026 BatchSave Pro</div></div></footer>
 </body>
 </html>
