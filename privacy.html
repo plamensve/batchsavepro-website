@@ -49,13 +49,13 @@
     <h2>3. PDF Tools</h2>
     <p>Files selected for Images → PDF, Merge PDF and Compress PDF are processed locally in the browser. These PDF Tool inputs are not uploaded to BatchSave Pro servers merely to perform the document operation.</p>
 
-    <h2>4. Gmail access</h2>
-    <p>BatchSave provides Gmail attachment functionality only when you initiate it. The extension may use visible Gmail attachment controls for an open message and, when configured and authorized, the official Gmail API for mailbox attachment search and retrieval.</p>
+    <h2>4. Gmail attachments</h2>
+    <p>BatchSave Pro can work with attachments that are visibly present in an open Gmail conversation. This feature runs only when you initiate a scan from the extension.</p>
     <ul>
-      <li>Google authorization is explicit.</li>
-      <li>The requested Gmail API access is read-only.</li>
-      <li>Gmail attachment data is used to perform the attachment workflow you request.</li>
-      <li>BatchSave does not use Gmail message data for advertising.</li>
+      <li>The extension inspects visible Gmail attachment elements in the currently open Gmail tab.</li>
+      <li>It may read attachment filenames and the visible message subject only to present the attachment list and trigger Gmail's own download controls.</li>
+      <li>BatchSave Pro does not request Gmail API access in the current Chrome Web Store release.</li>
+      <li>Gmail content is not used for advertising, profiling, or browsing-history tracking.</li>
     </ul>
 
     <h2>5. Account information</h2>
@@ -71,19 +71,29 @@
     <p>The extension may use Chrome extension storage to maintain session information, short-lived workflow state, preferences and operational state required for features such as authentication and downloads.</p>
 
     <h2>9. Permissions</h2>
-    <p>BatchSave requests browser permissions needed for its core functions, including active-tab access, downloads, extension storage, scripting on pages you choose to scan, identity for Google authorization, and access to the BatchSave account backend. Optional website access is requested when necessary to retrieve selected page resources.</p>
+    <p>The Chrome Web Store release uses the following permissions for its core user-facing functions:</p>
+    <ul>
+      <li><strong>activeTab</strong> — temporary access to the active tab after you invoke the extension.</li>
+      <li><strong>scripting</strong> — runs packaged BatchSave Pro code in the active tab to detect downloadable resources and visible Gmail attachment controls.</li>
+      <li><strong>downloads</strong> — saves files, ZIP archives and locally generated PDFs to your Downloads folder.</li>
+      <li><strong>storage</strong> — stores session information, preferences and temporary workflow state needed for the extension to function.</li>
+      <li><strong>Optional website access</strong> — requested only when needed to retrieve files or images you explicitly select for download or local ZIP creation.</li>
+    </ul>
 
     <h2>10. Third-party services</h2>
-    <p>BatchSave currently relies on service providers for specific functions, including Supabase for account infrastructure, Stripe for subscription billing, Google for Gmail authorization/API access, and Resend for transactional email delivery.</p>
+    <p>BatchSave currently relies on service providers for specific functions, including Supabase for account infrastructure, Stripe for subscription billing, and Resend for transactional email delivery. Gmail attachment handling in the current Chrome Web Store release uses visible controls in the open Gmail page and does not use the Gmail API.</p>
 
     <h2>11. Security and limitations</h2>
     <p>No software can guarantee that every website resource can be downloaded. Some sites require authentication, block cross-origin requests, use expiring links or dynamically generate files. BatchSave does not bypass website access controls or disabled Gmail downloads.</p>
 
-    <h2>12. Changes to this policy</h2>
+    <h2>12. Data use commitments</h2>
+    <p>BatchSave Pro does not sell user data. User data is not used for purposes unrelated to the extension's single purpose and is not used to determine creditworthiness or for lending purposes.</p>
+
+    <h2>13. Changes to this policy</h2>
     <p>This policy may be updated as BatchSave Pro evolves, particularly before or after Chrome Web Store publication or when connected services change. The current version will be published on this page.</p>
 
-    <h2>13. Contact</h2>
-    <p>Support and contact information will be added to the official BatchSave Pro website before the public Chrome Web Store release.</p>
+    <h2>14. Contact</h2>
+    <p>For BatchSave Pro support or privacy questions, contact <a href="mailto:svetoslavov.dev@gmail.com">svetoslavov.dev@gmail.com</a> or visit the <a href="support.html">Support page</a>.</p>
   </article>
 </div>
 </main>
