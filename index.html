@@ -19,12 +19,13 @@
       </a>
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="#features">Features</a>
+        <a href="#founders-offer">Launch offer</a>
         <a href="#gmail">Gmail</a>
         <a href="#pdf">PDF Tools</a>
         <a href="#privacy">Privacy</a>
         <a href="privacy.html">Policy</a>
       </nav>
-      <a class="nav-cta is-disabled" href="#availability" aria-disabled="true">Chrome Web Store · Soon</a>
+      <a class="nav-cta" href="https://chromewebstore.google.com/detail/batchsave-pro-%E2%80%94-bulk-file/fmcnaamkhfckofpehjffipbjbfgghneb" target="_blank" rel="noopener noreferrer">Add to Chrome ↗</a>
     </div>
   </header>
 
@@ -36,11 +37,8 @@
           <h1>Download more.<br><span>Click less.</span></h1>
           <p class="hero-lead">BatchSave Pro finds real files and photos on web pages, helps you collect Gmail attachments, and gives you practical PDF tools — all from one streamlined Chrome workspace.</p>
           <div class="hero-actions">
-            <a class="button primary is-disabled" href="#availability" aria-disabled="true">
-              <span>Get BatchSave Pro</span>
-              <small>Chrome Web Store · coming soon</small>
-            </a>
-            <a class="button secondary" href="#features">Explore features</a>
+            <a class="button primary" href="https://chromewebstore.google.com/detail/batchsave-pro-%E2%80%94-bulk-file/fmcnaamkhfckofpehjffipbjbfgghneb" target="_blank" rel="noopener noreferrer"><span>Add to Chrome ↗</span><small>Official Chrome Web Store listing</small></a>
+            <a class="button secondary" href="#founders-offer">See launch offer</a>
           </div>
           <div class="trust-row">
             <span><i>✓</i> Local PDF processing</span>
@@ -84,6 +82,34 @@
         <div><strong>150 files</strong><span>per local ZIP batch</span></div>
         <div><strong>100 MB</strong><span>ZIP safety limit</span></div>
         <div><strong>3 PDF tools</strong><span>built into the extension</span></div>
+      </div>
+    </section>
+
+    <section id="founders-offer" class="section founders-section" aria-labelledby="founders-title">
+      <div class="container">
+        <div class="section-heading centered">
+          <span class="section-kicker">Founders launch offer</span>
+          <h2 id="founders-title">Our first 20 subscribers get a better deal.</h2>
+          <p>Four limited discount tiers, five redemptions each. Every discount applies for the first three paid monthly billing cycles, then the regular €9.90/month rate applies.</p>
+        </div>
+        <div class="founders-grid">
+          <article class="founders-tier" data-discount="80"><span class="founders-label">First 5 redemptions</span><strong>80% OFF</strong><span class="founders-price">€1.98 <small>/ month</small></span><span class="founders-period">First 3 paid months</span></article>
+          <article class="founders-tier" data-discount="70"><span class="founders-label">Next 5 redemptions</span><strong>70% OFF</strong><span class="founders-price">€2.97 <small>/ month</small></span><span class="founders-period">First 3 paid months</span></article>
+          <article class="founders-tier" data-discount="60"><span class="founders-label">Next 5 redemptions</span><strong>60% OFF</strong><span class="founders-price">€3.96 <small>/ month</small></span><span class="founders-period">First 3 paid months</span></article>
+          <article class="founders-tier" data-discount="50"><span class="founders-label">Final 5 redemptions</span><strong>50% OFF</strong><span class="founders-price">€4.95 <small>/ month</small></span><span class="founders-period">First 3 paid months</span></article>
+        </div>
+        <div class="founders-active" aria-live="polite">
+          <div>
+            <span class="founders-active-label">CURRENT LAUNCH OFFER</span>
+            <h3 id="offer-headline">Checking available discount…</h3>
+            <p id="offer-description">The current promotion code and remaining redemptions are verified with Stripe.</p>
+          </div>
+          <div class="founders-code-area">
+            <div class="founders-code-row"><code id="offer-code">—</code><button id="offer-copy" type="button" disabled>Copy code</button></div>
+            <a class="button primary founders-install" href="https://chromewebstore.google.com/detail/batchsave-pro-%E2%80%94-bulk-file/fmcnaamkhfckofpehjffipbjbfgghneb" target="_blank" rel="noopener noreferrer">Add to Chrome ↗</a>
+          </div>
+        </div>
+        <p class="founders-terms">New eligible subscribers only. Start with a 3-day free trial; enter your promo code in Stripe Checkout inside the extension. Codes are limited to five redemptions each and are not reserved by visiting this page. The current tier may change before checkout. After the introductory discount, the subscription renews at €9.90/month unless canceled. Prices exclude any applicable taxes.</p>
       </div>
     </section>
 
@@ -234,11 +260,11 @@
       <div class="container cta-card">
         <img src="assets/batchsave-logo.png" alt="">
         <div>
-          <span class="section-kicker light">Launching soon</span>
-          <h2>BatchSave Pro is being prepared for the Chrome Web Store.</h2>
-          <p>Once the public listing is approved, the install button on this page will link directly to the official Chrome Web Store listing.</p>
+          <span class="section-kicker light">Now on Chrome Web Store</span>
+          <h2>Start downloading smarter with BatchSave Pro.</h2>
+          <p>Install the official Chrome extension and start your 3-day free trial. Check the launch offer above for a limited introductory discount.</p>
         </div>
-        <span class="store-button disabled">Chrome Web Store<br><small>Link coming after approval</small></span>
+        <a class="store-button" href="https://chromewebstore.google.com/detail/batchsave-pro-%E2%80%94-bulk-file/fmcnaamkhfckofpehjffipbjbfgghneb" target="_blank" rel="noopener noreferrer">Add to Chrome ↗<br><small>Official Chrome Web Store</small></a>
       </div>
     </section>
 
@@ -253,7 +279,7 @@
           <details><summary>Can it download every file from every website?</summary><p>No browser extension can guarantee that. Some sites block cross-origin fetching, require authentication, generate files dynamically or use unsupported redirects. BatchSave provides direct download fallback where appropriate.</p></details>
           <details><summary>How does Gmail access work?</summary><p>Visible attachment scanning can use Gmail’s own page controls. Full mailbox attachment search uses the official Gmail API with explicit read-only Google authorization.</p></details>
           <details><summary>What happens when filenames are duplicated?</summary><p>BatchSave does not intentionally overwrite existing files. Chrome can automatically uniquify matching filenames.</p></details>
-          <details><summary>Is BatchSave Pro already on the Chrome Web Store?</summary><p>Not yet. The extension is currently being prepared for submission. This website will link to the official listing after approval.</p></details>
+          <details><summary>Is BatchSave Pro already on the Chrome Web Store?</summary><p>Yes. <a href="https://chromewebstore.google.com/detail/batchsave-pro-%E2%80%94-bulk-file/fmcnaamkhfckofpehjffipbjbfgghneb" target="_blank" rel="noopener noreferrer">Install BatchSave Pro from its official Chrome Web Store listing</a>.</p></details>
           <details><summary>Can I manage my subscription?</summary><p>Yes. Signed-in users with an active or trialing subscription can open subscription management from the extension.</p></details>
         </div>
       </div>
@@ -263,9 +289,53 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-brand"><img src="assets/batchsave-logo.png" alt=""><div><strong>BatchSave Pro</strong><span>Bulk downloads. Gmail attachments. PDF tools.</span></div></div>
-      <div class="footer-links"><a href="#features">Features</a><a href="support.html">Support</a><a href="mailto:support@batchsavepro.com">support@batchsavepro.com</a><a href="privacy.html">Privacy Policy</a><a href="#availability">Chrome Web Store</a></div>
+      <div class="footer-links"><a href="#features">Features</a><a href="support.html">Support</a><a href="mailto:support@batchsavepro.com">support@batchsavepro.com</a><a href="privacy.html">Privacy Policy</a><a href="https://chromewebstore.google.com/detail/batchsave-pro-%E2%80%94-bulk-file/fmcnaamkhfckofpehjffipbjbfgghneb" target="_blank" rel="noopener noreferrer">Chrome Web Store</a></div>
       <div class="footer-copy">© 2026 BatchSave Pro</div>
     </div>
   </footer>
+  <script>
+    (() => {
+      const endpoint = "https://gcfyaaqqsqrjwujpymjz.supabase.co/functions/v1/launch-offer-status";
+      const headline = document.getElementById("offer-headline");
+      const description = document.getElementById("offer-description");
+      const code = document.getElementById("offer-code");
+      const copy = document.getElementById("offer-copy");
+      const cards = [...document.querySelectorAll(".founders-tier")];
+      async function updateOffer() {
+        try {
+          const response = await fetch(endpoint, {cache:"no-store"});
+          if (!response.ok) throw new Error("Availability request failed");
+          const data = await response.json();
+          cards.forEach(card => {
+            const tier = data.tiers.find(t => String(t.discount) === card.dataset.discount);
+            card.classList.toggle("is-current", !!data.current && tier?.code === data.current.code);
+            card.classList.toggle("is-sold-out", !!tier && !tier.available);
+            card.setAttribute("aria-label", card.textContent.trim() + (tier ? (tier.available ? ", " + tier.remaining + " redemptions remaining" : ", exhausted") : ""));
+          });
+          if (!data.current) {
+            headline.textContent = "All 20 launch offers have been claimed";
+            description.textContent = "The standard €9.90/month plan is still available with a 3-day free trial for eligible users.";
+            code.textContent = "—"; copy.disabled = true; return;
+          }
+          headline.textContent = data.current.discount + "% off — " + data.current.price + "/month";
+          description.textContent = data.current.remaining + " of 5 redemptions left at this tier. Discount applies for your first 3 paid months.";
+          code.textContent = data.current.code;
+          copy.disabled = false;
+        } catch {
+          headline.textContent = "Launch offer availability is temporarily unavailable";
+          description.textContent = "Check Stripe Checkout for currently valid offers. No discount is guaranteed until your code is accepted.";
+          code.textContent = "—"; copy.disabled = true;
+        }
+      }
+      copy.addEventListener("click", async () => {
+        if (copy.disabled || code.textContent === "—") return;
+        try { await navigator.clipboard.writeText(code.textContent); copy.textContent = "Copied!"; }
+        catch { copy.textContent = "Select the code to copy"; }
+        setTimeout(() => copy.textContent = "Copy code", 2000);
+      });
+      updateOffer();
+      setInterval(updateOffer, 60000);
+    })();
+  </script>
 </body>
 </html>
