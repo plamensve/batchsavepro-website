@@ -59,11 +59,20 @@
     if(localStorage.getItem(receipt))return;
     localStorage.setItem(receipt,"1");
     window.dataLayer=window.dataLayer||[];
-    window.dataLayer.push({event:"batchsave_signup_confirmed"});
-    // Load GTM only AFTER auth fragments have been removed and verified.
+    window.gtag=function(){window.dataLayer.push(arguments);};
+    gtag("js",new Date());
+    gtag("config","AW-18444391789");
+    // This real conversion is emitted only after Supabase verifies a newly confirmed user.
+    gtag("event","conversion",{
+      send_to:"AW-18444391789/V57vCLmIxrUdE02q_NpE",
+      value:0,
+      currency:"EUR",
+      transaction_id:user.id
+    });
+    // Load Google Ads after the verification token was removed from the URL.
     const script=document.createElement("script");
     script.async=true;
-    script.src="https://www.googletagmanager.com/gtm.js?id=GTM-TZVHRN4C";
+    script.src="https://www.googletagmanager.com/gtag/js?id=AW-18444391789";
     document.head.appendChild(script);
   }catch{
     heading.textContent="Could not verify confirmation";
