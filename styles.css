@@ -138,3 +138,24 @@ img{max-width:100%}
   .cta-card{grid-template-columns:1fr;text-align:left;padding:28px}.cta-card>img{width:58px;height:58px}
   .footer-grid{grid-template-columns:1fr}.footer-links{flex-wrap:wrap}
 }
+
+/* Founders launch campaign — responsive and tied to current Stripe availability */
+.founders-section{background:linear-gradient(180deg,#eef5ff 0%,#f9fbff 100%);padding-top:86px;padding-bottom:86px}
+.founders-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:35px 0 22px}
+.founders-tier{display:flex;flex-direction:column;gap:14px;background:#fff;border:1px solid #dce7f8;border-radius:20px;padding:22px 17px;box-shadow:0 12px 30px rgba(15,53,120,.04);transition:border-color .2s,transform .2s}
+.founders-tier.is-current{border:2px solid #2563eb;transform:translateY(-4px);box-shadow:0 16px 35px rgba(37,99,235,.12)}
+.founders-tier.is-sold-out{opacity:.58}
+.founders-label{font-size:12px;color:#64748b;font-weight:750}
+.founders-tier>strong{font-size:35px;letter-spacing:-.045em;line-height:1.1;color:#123e8a}
+.founders-price{font-size:24px;font-weight:850;color:#0f172a}.founders-price small{font-size:12px;font-weight:500;color:#64748b}
+.founders-period{font-size:12px;color:#64748b}
+.founders-active{display:flex;align-items:center;justify-content:space-between;gap:22px;padding:28px;border-radius:22px;background:#071b45;color:#fff}
+.founders-active-label{font-size:10px;letter-spacing:.13em;color:#7dd3fc;font-weight:900}
+.founders-active h3{font-size:27px;margin:8px 0}.founders-active p{font-size:13px;line-height:1.6;color:#c5d5ee;max-width:550px;margin:0}
+.founders-code-area{display:grid;gap:12px;min-width:225px}.founders-code-row{display:flex;align-items:center;justify-content:space-between;gap:10px;border:1px solid rgba(255,255,255,.28);border-radius:11px;padding:8px 10px}
+.founders-code-row code{font-size:17px;font-weight:900;color:#fff}.founders-code-row button{border:0;border-radius:8px;background:#dbeafe;color:#123e8a;padding:10px;font-weight:800;cursor:pointer}.founders-code-row button:disabled{opacity:.55;cursor:not-allowed}
+.founders-install{text-decoration:none!important;text-align:center;justify-content:center}
+.founders-terms{font-size:12px;line-height:1.7;color:#64748b;margin:18px 3px 0}
+.store-button{text-decoration:none;display:inline-block;cursor:pointer}
+@media(max-width:980px){.founders-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.founders-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.founders-tier{padding:16px 12px}.founders-tier>strong{font-size:28px}.founders-price{font-size:20px}.founders-active{flex-direction:column;align-items:stretch;padding:22px}.founders-code-area{min-width:0}.founders-active h3{font-size:23px}}
