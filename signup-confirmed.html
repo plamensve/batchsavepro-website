@@ -40,6 +40,16 @@ p{font-size:14px;line-height:1.6;color:#52657f;margin:0}
  const type=params.get("type");
  // Supabase Auth returns access tokens in the fragment; remove before loading analytics.
  history.replaceState(null,"",location.pathname);
+ // Always initialize the base Google tag for diagnostics, even when no signup token is present.
+ // Tokens are removed from the browser URL BEFORE the tag is loaded.
+ window.dataLayer=window.dataLayer||[];
+ window.gtag=function(){window.dataLayer.push(arguments);};
+ gtag("js",new Date());
+ gtag("config","AW-18444391789");
+ const googleScript=document.createElement("script");
+ googleScript.async=true;
+ googleScript.src="https://www.googletagmanager.com/gtag/js?id=AW-18444391789";
+ document.head.appendChild(googleScript);
  if(!accessToken||!["signup","email"].includes(type)){
    heading.textContent="Email confirmation";
    copy.textContent="Use the latest confirmation link from your email. If already confirmed, sign in to BatchSave Pro.";
@@ -70,22 +80,12 @@ p{font-size:14px;line-height:1.6;color:#52657f;margin:0}
       now-created<0||now-created>30*86400000)return;
    const key="batchsave_signup_conversion_"+user.id;
    if(localStorage.getItem(key))return;
-   // Conversion tracking only after confirmation and token removal.
-   const js=document.createElement("script");
-   js.async=true;
-   js.src="https://www.googletagmanager.com/gtag/js?id=AW-18444391789";
-   js.onload=()=>{
-     window.dataLayer=window.dataLayer||[];
-     window.gtag=function(){dataLayer.push(arguments);};
-     gtag("js",new Date());
-     gtag("config","AW-18444391789");
-     gtag("event","conversion",{
-       send_to:"AW-18444391789/V57vCLmIxrUdE02q_NpE",
-       transaction_id:user.id
-     });
-     localStorage.setItem(key,"1");
-   };
-   document.head.appendChild(js);
+   // Only this event counts as a signup, after Supabase confirms the user.
+   gtag("event","conversion",{
+     send_to:"AW-18444391789/V57vCLmIxrUdE02q_NpE",
+     transaction_id:user.id
+   });
+   localStorage.setItem(key,"1");
  }catch{
    heading.textContent="Confirmation not verified";
    copy.textContent="Open the newest confirmation email or sign in if your email has already been confirmed.";
