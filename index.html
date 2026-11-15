@@ -120,6 +120,23 @@
       </div>
     </section>
 
+    <section id="roadmap" class="section vote-section" aria-labelledby="vote-title">
+      <div class="container">
+        <div class="section-heading centered">
+          <span class="section-kicker">Built with our community</span>
+          <h2 id="vote-title">You choose what we build next.</h2>
+          <p>Vote for the feature you want in BatchSave Pro. When an idea reaches <strong>10 votes</strong>, it moves to our development roadmap.</p>
+        </div>
+        <div class="vote-meta"><span class="vote-goal"><span aria-hidden="true">✦</span> 10 votes to unlock development</span><span>One vote per visitor · No account needed</span></div>
+        <div id="feature-poll" class="vote-grid" aria-live="polite">
+          <p class="vote-placeholder">Loading community votes…</p>
+        </div>
+        <p id="vote-feedback" class="vote-feedback" role="status" aria-live="polite">Choose one idea. Your vote helps prioritize the next release.</p>
+        <p class="vote-disclaimer">Votes inform our roadmap; release timing depends on feasibility and testing. We use limited technical information to prevent duplicate votes. <a href="privacy.html">Privacy details</a>.</p>
+      </div>
+    </section>
+
+
     <section id="features" class="section">
       <div class="container">
         <div class="section-heading">
@@ -218,22 +235,6 @@
     </section>
 
 
-    <section id="roadmap" class="section vote-section" aria-labelledby="vote-title">
-      <div class="container">
-        <div class="section-heading centered">
-          <span class="section-kicker">Built with our community</span>
-          <h2 id="vote-title">You choose what we build next.</h2>
-          <p>Vote for the feature you want in BatchSave Pro. When an idea reaches <strong>10 votes</strong>, it moves to our development roadmap.</p>
-        </div>
-        <div class="vote-meta"><span class="vote-goal"><span aria-hidden="true">✦</span> 10 votes to unlock development</span><span>One vote per visitor · No account needed</span></div>
-        <div id="feature-poll" class="vote-grid" aria-live="polite">
-          <p class="vote-placeholder">Loading community votes…</p>
-        </div>
-        <p id="vote-feedback" class="vote-feedback" role="status" aria-live="polite">Choose one idea. Your vote helps prioritize the next release.</p>
-        <p class="vote-disclaimer">Votes inform our roadmap; release timing depends on feasibility and testing. We use limited technical information to prevent duplicate votes. <a href="privacy.html">Privacy details</a>.</p>
-      </div>
-    </section>
-
     <section id="privacy" class="section privacy-section">
       <div class="container privacy-grid">
         <div>
@@ -325,8 +326,10 @@
       const copy = document.getElementById("offer-copy");
       const cards = [...document.querySelectorAll(".founders-tier")];
       async function updateOffer() {
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), 8000);
         try {
-          const response = await fetch(endpoint, {cache:"no-store"});
+          const response = await fetch(endpoint, {cache:"no-store", signal:controller.signal});
           if (!response.ok) throw new Error("Availability request failed");
           const data = await response.json();
           cards.forEach(card => {
@@ -348,6 +351,8 @@
           headline.textContent = "Launch offer availability is temporarily unavailable";
           description.textContent = "Check Stripe Checkout for currently valid offers. No discount is guaranteed until your code is accepted.";
           code.textContent = "—"; copy.disabled = true;
+        } finally {
+          clearTimeout(timeout);
         }
       }
       copy.addEventListener("click", async () => {
