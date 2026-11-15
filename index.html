@@ -28,7 +28,7 @@
         <a href="#founders-offer">Launch offer</a>
         <a href="#gmail">Gmail</a>
         <a href="#pdf">PDF Tools</a>
-        <a href="#privacy">Privacy</a>
+        <a href="#roadmap">Vote for a feature</a>\n        <a href="#privacy">Privacy</a>
         <a href="privacy.html">Policy</a>
       </nav>
       <a class="nav-cta" href="https://chromewebstore.google.com/detail/batchsave-pro-%E2%80%94-bulk-file/fmcnaamkhfckofpehjffipbjbfgghneb" target="_blank" rel="noopener noreferrer">Add to Chrome ↗</a>
@@ -216,6 +216,23 @@
       </div>
     </section>
 
+
+    <section id="roadmap" class="section vote-section" aria-labelledby="vote-title">
+      <div class="container">
+        <div class="section-heading centered">
+          <span class="section-kicker">Built with our community</span>
+          <h2 id="vote-title">You choose what we build next.</h2>
+          <p>Vote for the feature you want in BatchSave Pro. When an idea reaches <strong>10 votes</strong>, it moves to our development roadmap.</p>
+        </div>
+        <div class="vote-meta"><span class="vote-goal"><span aria-hidden="true">✦</span> 10 votes to unlock development</span><span>One vote per visitor · No account needed</span></div>
+        <div id="feature-poll" class="vote-grid" aria-live="polite">
+          <p class="vote-placeholder">Loading community votes…</p>
+        </div>
+        <p id="vote-feedback" class="vote-feedback" role="status" aria-live="polite">Choose one idea. Your vote helps prioritize the next release.</p>
+        <p class="vote-disclaimer">Votes inform our roadmap; release timing depends on feasibility and testing. We use limited technical information to prevent duplicate votes. <a href="privacy.html">Privacy details</a>.</p>
+      </div>
+    </section>
+
     <section id="privacy" class="section privacy-section">
       <div class="container privacy-grid">
         <div>
@@ -299,8 +316,7 @@
       <div class="footer-copy">© 2026 BatchSave Pro</div>
     </div>
   </footer>
-  <script>
-    (() => {
+  <script src="feature-voting.js" defer></script>\n  <script>\n    (() => {
       const endpoint = "https://gcfyaaqqsqrjwujpymjz.supabase.co/functions/v1/launch-offer-status";
       const headline = document.getElementById("offer-headline");
       const description = document.getElementById("offer-description");
