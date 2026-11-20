@@ -71,21 +71,21 @@ p{font-size:14px;line-height:1.6;color:#52657f;margin:0}
    copy.textContent="Your email address has been confirmed successfully.";
    status.textContent="Return to the BatchSave Pro extension and sign in with your email and password.";
    status.classList.add("success");
-   const created=Date.parse(user.created_at||"");
-   const confirmed=Date.parse(user.email_confirmed_at||"");
-   const now=Date.now();
-   // Do not count older accounts reopening their confirmation link.
-   if(!Number.isFinite(created)||!Number.isFinite(confirmed)||
-      confirmed<created||now-confirmed<0||now-confirmed>48*3600000||
-      now-created<0||now-created>30*86400000)return;
+   // Verification above is the only prerequisite for recording a signup.
+   // Avoid clock-based checks: a device/server time difference can silently skip valid signups.
    const key="batchsave_signup_conversion_"+user.id;
-   if(localStorage.getItem(key))return;
-   // Only this event counts as a signup, after Supabase confirms the user.
+   try {
+     if(localStorage.getItem(key)==="1")return;
+   } catch {
+     // Storage may be blocked; transaction_id still helps Google deduplicate.
+   }
    gtag("event","conversion",{
      send_to:"AW-18444391789/V57vCLmIxrUdE02q_NpE",
      transaction_id:user.id
    });
-   localStorage.setItem(key,"1");
+   // Remember locally that the event was queued; do not alter account state.
+   try { localStorage.setItem(key,"1"); } catch {}
+   console.info("[BatchSave Pro] Verified signup: Google Ads event queued.");
  }catch{
    heading.textContent="Confirmation not verified";
    copy.textContent="Open the newest confirmation email or sign in if your email has already been confirmed.";
